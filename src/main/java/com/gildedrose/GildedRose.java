@@ -18,25 +18,20 @@ class GildedRose {
 
     private void Denote(Item item){
         switch (item.name){
-            case "Conjured Mana Cake": {
+            case "Conjured Mana Cake":
                 DenoteConjuredItem(item);
                 break;
-            }
-            case "Backstage passes to a TAFKAL80ETC concert": {
+            case "Backstage passes to a TAFKAL80ETC concert":
                 increaseQualityBackstagePasses(item);
                 break;
-            }
-            case "Aged Brie": {
+            case "Aged Brie":
                 increaseQualityAgedBrie(item);
                 break;
-            }
-            case "Sulfuras, Hand of Ragnaros": {
+            case "Sulfuras, Hand of Ragnaros":
                 break;
-            }
-            default: {
+            default:
                 DenoteItem(item);
                 break;
-            }
         }
         if(!item.name.equals("Sulfuras, Hand of Ragnaros"))
         item.sellIn -= 1;
